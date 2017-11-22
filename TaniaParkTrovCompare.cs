@@ -72,7 +72,7 @@ namespace TPark_Trov_compare
             int expectedResult;
             string value;
             string objective;         //test case objective(s)
-
+           
             //  Add or remove cultureNames (found in a culture table online) for alternate culture(s) testing
             //  USA and Japan used for these tests
             String[] cultureNames = { "en-US", "ja-JP" };
@@ -91,16 +91,15 @@ namespace TPark_Trov_compare
 
             try
             {
+
+                //create an instance of the reader 
+                XmlTextReader reader = new XmlTextReader("C:\\VisualStudio\\Trov-compareMini.xml");
+
                 //create a new file to capture the results
                 FileStream fileStream = new FileStream("Logs_TestCaseResults.txt", FileMode.Create, FileAccess.Write);
                 //first save the standard output
                 StreamWriter streamWriter = new StreamWriter(fileStream);
                 Console.SetOut(streamWriter);
-
-                //create an instance of the reader 
-#pragma warning disable IDE0017 // Simplify object initialization
-                XmlTextReader reader = new XmlTextReader("M:\\VisualStudio\\Trov-compareMini.xml");
-#pragma warning restore IDE0017 // Simplify object initialization
                 
                 //Disable whitespace so that you don't have to read over whitespaces
                 reader.WhitespaceHandling = WhitespaceHandling.None;
