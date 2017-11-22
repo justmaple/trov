@@ -82,7 +82,7 @@ namespace TPark_Trov_compare
             While it's parsing through the xml file, assign nodes to the variables needed for the string comparison.
             Loop through the cultureNames that are hard coded in the string array in the declarations.
             For each comparisonType(6), input the testing data into the function to prove it is working as expected &
-            print the results to the file located in the same folder that the application was ran
+            print the results to the file located in the ..\source\repos\TPark_Trov-compare\TPark_Trov-compare\bin\Debug folder
 
             * *Known issue - the text file reaches the max number of lines. There are quite a few iterations of results 
             displayed in the text file for the purpose of this exercise
@@ -93,7 +93,7 @@ namespace TPark_Trov_compare
             {
 
                 //create an instance of the reader 
-                XmlTextReader reader = new XmlTextReader("C:\\VisualStudio\\Trov-compareMini.xml");
+                XmlTextReader reader = new XmlTextReader("Trov-compareMini.xml");
 
                 //create a new file to capture the results
                 FileStream fileStream = new FileStream("Logs_TestCaseResults.txt", FileMode.Create, FileAccess.Write);
