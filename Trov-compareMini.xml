@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CompareStringTests>
+  <TestCase value="precedes">
+    <objective>less than zero: StringA precedes - Alpha upper lower cases</objective>
+    <stringA>Management</stringA>
+    <indexA>0</indexA>
+    <stringB>moMents</stringB>
+    <indexB>2</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero:  StringA precedes - AlphaNumeric</objective>
+    <stringA>ret1rement</stringA>
+    <indexA>3</indexA>
+    <stringB>retirement</stringB>
+    <indexB>3</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero:  StringA precedes - Numeric format</objective>
+    <stringA>684086839</stringA>
+    <indexA>0</indexA>
+    <stringB>684186839</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero:  StringA precedes - Latin characters</objective>
+    <stringA>ä, é, ò</stringA>
+    <indexA>0</indexA>
+    <stringB>ŢàńĨá</stringB>
+    <indexB>1</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero:  StringA precedes - French characters</objective>
+    <stringA>definition</stringA>
+    <indexA>1</indexA>
+    <stringB>définition</stringB>
+    <indexB>1</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero:  StringA precedes - hyphen special characters</objective>
+    <stringA>coop</stringA>
+    <indexA>0</indexA>
+    <stringB>co-op</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero:  StringA precedes - Japanese characters</objective>
+    <stringA>徒歩</stringA>
+    <indexA>0</indexA>
+    <stringB>仕事</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero:  StringA precedes - Chinese characters</objective>
+    <stringA>走</stringA>
+    <indexA>0</indexA>
+    <stringB>工作</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero:  StringA precedes - date format</objective>
+    <stringA>11.10.2017
+</stringA>
+    <indexA>0</indexA>
+    <stringB>11.11.2017
+</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: StringA same position - Alpha upper lower cases</objective>
+    <stringA>Archæology</stringA>
+    <indexA>4</indexA>
+    <stringB>ARCHÆOLOGY
+</stringB>
+    <indexB>4</indexB>
+    <length>20</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: StringA same position - AlphaNumeric
+</objective>
+    <stringA>trov15c00l</stringA>
+    <indexA>0</indexA>
+    <stringB>TroV15c00l
+</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: StringA same position - Numeric format
+</objective>
+    <stringA>684286839
+</stringA>
+    <indexA>1</indexA>
+    <stringB>684286839
+</stringB>
+    <indexB>1</indexB>
+    <length>4</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: StringA same position - Latin characters
+</objective>
+    <stringA>ŢàńĨa
+</stringA>
+    <indexA>0</indexA>
+    <stringB>Tania
+</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: StringA same position - French characters
+</objective>
+    <stringA>encyclopædia
+</stringA>
+    <indexA>4</indexA>
+    <stringB>encyclopaedia
+</stringB>
+    <indexB>4</indexB>
+    <length>20</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: StringA same position - hyphen special characters
+</objective>
+    <stringA>co-operation
+</stringA>
+    <indexA>0</indexA>
+    <stringB>co-op</stringB>
+    <indexB>0</indexB>
+    <length>4</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: StringA same position  - Japanese characters
+</objective>
+    <stringA>徒歩
+</stringA>
+    <indexA>0</indexA>
+    <stringB>徒歩
+</stringB>
+    <indexB>0</indexB>
+    <length>4</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: StringA same position - Chinese characters
+</objective>
+    <stringA>工作
+</stringA>
+    <indexA>0</indexA>
+    <stringB>工作
+</stringB>
+    <indexB>0</indexB>
+    <length>3</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: Length parameter equals 0</objective>
+    <stringA>Archæology
+</stringA>
+    <indexA>4</indexA>
+    <stringB>BAScience
+</stringB>
+    <indexB>0</indexB>
+    <length>0</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: StringA follows - Alpha upper lower cases
+</objective>
+    <stringA>ARCHÆOLOGY
+
+</stringA>
+    <indexA>3</indexA>
+    <stringB>APPLE
+</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: StringA follows - Numeric format
+</objective>
+    <stringA>684286839
+</stringA>
+    <indexA>2</indexA>
+    <stringB>684186839
+</stringB>
+    <indexB>2</indexB>
+    <length>20</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: StringA follows - Latin characters
+</objective>
+    <stringA>[A-Za-z]+
+</stringA>
+    <indexA>0</indexA>
+    <stringB>ä, é, ò
+</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: StringA follows - French characters
+</objective>
+    <stringA>encyclopædia
+
+</stringA>
+    <indexA>5</indexA>
+    <stringB>encyclopedia
+</stringB>
+    <indexB>5</indexB>
+    <length>20</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: StringA follows - hyphen special characters
+</objective>
+    <stringA>special&amp;
+</stringA>
+    <indexA>0</indexA>
+    <stringB>special
+</stringB>
+    <indexB>0</indexB>
+    <length>20</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: StringA follows - Japanese characters
+</objective>
+    <stringA>仕事
+
+
+</stringA>
+    <indexA>0</indexA>
+    <stringB>徒歩
+</stringB>
+    <indexB>0</indexB>
+    <length>5</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: StringA follows - Chinese characters
+</objective>
+    <stringA>工作
+</stringA>
+    <indexA>0</indexA>
+    <stringB>走
+</stringB>
+    <indexB>0</indexB>
+    <length>5</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: StringA follows - date time 
+</objective>
+    <stringA>11.11.2017
+</stringA>
+    <indexA>3</indexA>
+    <stringB>11.10.2017
+</stringB>
+    <indexB>3</indexB>
+    <length>10</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero: string precedes - StringA longer than StringB - Alpha upper lower cases
+
+</objective>
+    <stringA>moMents
+</stringA>
+    <indexA>2</indexA>
+    <stringB>mament
+</stringB>
+    <indexB>2</indexB>
+    <length>20</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: strings follows - StringA shorter than StringB - Alpha upper lower cases
+</objective>
+    <stringA>momenT
+</stringA>
+    <indexA>2</indexA>
+    <stringB>moMentS
+</stringB>
+    <indexB>2</indexB>
+    <length>20</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero: StringA is empty string - StringB null 
+</objective>
+    <stringA>""
+</stringA>
+    <indexA>0</indexA>
+    <stringB>U+0000
+</stringB>
+    <indexB>0</indexB>
+    <length>7</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+  <TestCase value="follows">
+    <objective>more than zero: StringA is null - StringB valid data 
+</objective>
+    <stringA>U+0000
+</stringA>
+    <indexA>0</indexA>
+    <stringB>79428245
+</stringB>
+    <indexB>0</indexB>
+    <length>9</length>
+    <expectedResult>1</expectedResult>
+  </TestCase>
+  <TestCase value="same">
+    <objective>zero: Both comprands are null 
+</objective>
+    <stringA>\0
+</stringA>
+    <indexA>0</indexA>
+    <stringB>\0
+</stringB>
+    <indexB>0</indexB>
+    <length>3</length>
+    <expectedResult>0</expectedResult>
+  </TestCase>
+  <TestCase value="ArgumentOutOfRangeExceptionCase&#xD;&#xA;">
+    <objective>indexA is greater than stringA.length
+</objective>
+    <stringA>cat
+</stringA>
+    <indexA>4</indexA>
+    <stringB>music</stringB>
+    <indexB>1</indexB>
+    <length>5</length>
+    <expectedResult></expectedResult>
+  </TestCase>
+  <TestCase value="ArgumentOutOfRangeExceptionCase&#xD;&#xA;">
+    <objective>indexB is greater than stringB.length
+</objective>
+    <stringA>dog
+</stringA>
+    <indexA>1</indexA>
+    <stringB>woof
+</stringB>
+    <indexB>5</indexB>
+    <length>5</length>
+    <expectedResult></expectedResult>
+  </TestCase>
+  <TestCase value="ArgumentOutOfRangeExceptionCase&#xD;&#xA;">
+    <objective>indexA is negative
+</objective>
+    <stringA>dog
+</stringA>
+    <indexA>-1</indexA>
+    <stringB>woof</stringB>
+    <indexB>0</indexB>
+    <length>5</length>
+    <expectedResult></expectedResult>
+  </TestCase>
+  <TestCase value="ArgumentOutOfRangeExceptionCase&#xD;&#xA;">
+    <objective>indexB is negative
+</objective>
+    <stringA>dog
+</stringA>
+    <indexA>0</indexA>
+    <stringB>woof</stringB>
+    <indexB>-1</indexB>
+    <length>5</length>
+    <expectedResult></expectedResult>
+  </TestCase>
+  <TestCase value="ArgumentOutOfRangeExceptionCase&#xD;&#xA;">
+    <objective>length is negative
+</objective>
+    <stringA>dog
+</stringA>
+    <indexA>0</indexA>
+    <stringB>woof</stringB>
+    <indexB>0</indexB>
+    <length>-1</length>
+    <expectedResult></expectedResult>
+  </TestCase>
+  <TestCase value="ArgumentOutOfRangeExceptionCase&#xD;&#xA;">
+    <objective>IndexA is null, and length is greater than zero
+</objective>
+    <stringA>Trov 
+</stringA>
+    <indexA>0</indexA>
+    <stringB>trov</stringB>
+    <indexB>1
+</indexB>
+    <length>4</length>
+    <expectedResult></expectedResult>
+  </TestCase>
+  <TestCase value="ArgumentOutOfRangeExceptionCase&#xD;&#xA;">
+    <objective>IndexB is null, and length is greater than zero
+</objective>
+    <stringA>tRov
+</stringA>
+    <indexA>1</indexA>
+    <stringB>trov</stringB>
+    <indexB>U+0000
+</indexB>
+    <length>5</length>
+    <expectedResult></expectedResult>
+  </TestCase>
+  <TestCase value="ArgumentException&#xD;&#xA;">
+    <objective>comparisonType is not a StringComparison value
+</objective>
+    <stringA>tRov
+</stringA>
+    <indexA>0</indexA>
+    <stringB>trov</stringB>
+    <indexB>0</indexB>
+    <length>5</length>
+    <expectedResult></expectedResult>
+  </TestCase>
+  <TestCase value="ArgumentOutOfRangeExceptionCase&#xD;&#xA;">
+    <objective>length is bigger than int 32
+
+</objective>
+    <stringA>management
+</stringA>
+    <indexA>0</indexA>
+    <stringB>moments</stringB>
+    <indexB>2</indexB>
+    <length>4294967299
+</length>
+    <expectedResult></expectedResult>
+  </TestCase>
+  <TestCase value="precedes">
+    <objective>less than zero: length is shorter than substring length(s))
+</objective>
+    <stringA>management
+</stringA>
+    <indexA>0</indexA>
+    <stringB>moments
+</stringB>
+    <indexB>2</indexB>
+    <length>3</length>
+    <expectedResult>-1</expectedResult>
+  </TestCase>
+</CompareStringTests>
