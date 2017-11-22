@@ -338,10 +338,10 @@
   <TestCase value="same">
     <objective>zero: Both comprands are null 
 </objective>
-    <stringA>\0
+    <stringA>U+0000
 </stringA>
     <indexA>0</indexA>
-    <stringB>\0
+    <stringB>U+0000
 </stringB>
     <indexB>0</indexB>
     <length>3</length>
